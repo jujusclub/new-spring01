@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+ 
+* {
+  font-family: 'Pretendard-Regular';
+  margin: 0;
+  padding: 0;
+}
+
+body {
+ width: 100%;
+ /*  width: 1903px; */
+  /*height: 1650px;*/
+  height: 100%;
+  	margin: 0;
+	padding: 0;
+
+}
+
+/*  */
+        .list_title_div{
+        height: 100px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 50px;
+        }
+        
+        /*  */
+        .list_title{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        }
+
+		.country_list{
+		display: flex;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		margin-bottom: 20px;
+		width: 1200px;
+		}
+		
+		.country_content{
+		/* margin-right: 10px; */
+		cursor: pointer;
+		margin-right: auto;
+		margin-left: auto;		
+		/*  */
+	padding: 5px 40px;		
+    width: 100px;
+    height: 63px;		
+    
+		}
+
+
+/*  */
+
+/*  */
+
+
+/*  */
+
+   /* tab 색상 유지 */
+     .movet {
+    background-color: rgb(20, 3, 78); /* 배경색을 원하는 색상으로 설정 */
+    color: white!important; /* 글자색을 원하는 색상으로 설정 */
+}
+
+
+/* 이미지 컨테이너에 대한 스타일 */
+.image-container {
+    position: relative;
+}
+
+/* 오버레이를 감추기 위한 초기 스타일 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* 초기에 투명 배경 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s; /* 부드러운 투명도 전환 효과 */
+}
+
+/* 오버레이 내용 스타일 */
+.overlay-content {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* 이미지 위에 마우스를 올렸을 때 오버레이를 나타내는 스타일 */
+.image-container:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* 마우스 오버시 배경 투명도 변경 */
+    opacity: 1; /* 오버레이 표시 */
+}
+
+
+/*----------------------------------------content---------------------------*/
+
+
+.content{
+    width: 1300px;
+    /* height: 2150px; */
+    height: 100%;
+    margin-bottom: 40px;
+    /* border-style: dashed; */
+    border-color: blue;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+#category{
+	/*border-style: solid;*/
+	cursor: pointer;
+	display: flex;
+	
+	margin-bottom: 30px;
+			
+}
+.all_country {
+	margin-left: auto;
+	
+	
+}
+.category_uk{
+	margin-left: 10px;
+	}
+.category_fr{
+	margin-left: 10px;
+}	
+.category_es{
+	margin-left: 10px;
+}
+.category_ita {
+	margin-left: 10px;
+	margin-right: auto;
+}
+
+
+/*  */
+
+
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+    th, td {
+    border: 1px solid #444444;
+    height: 50px;
+  }
+  
+  .container{
+	  text-align: center;
+  }
+
+.container a{
+  display: block; /* 영역적용위해 사용 */
+  width: 100%; height: 100%;
+
+  overflow: hidden;
+
+  position: relative; /* absolute의 기본기준은 body로 처리 - 현재 요소로 기준변경 */
+}
+
+.container figcaption{
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+
+  position: absolute; /* 이미지와 겹치게 처리 */
+  top: 0; left: 0;
+
+  color: #fff; text-align: center;
+  line-height: 200px;
+
+  opacity: 0; /* 처음엔 안보이고 */
+
+  transition: 0.3s;
+}
+
+.container a:hover figcaption, .container a:focus figcaption{
+  /* 마우스를 올리면 보이게 처리 */
+  opacity: 1;
+}
+
+  /*  */
+  a {
+    text-decoration-line: none;
+  }
+  a:link {
+   /*  color : black; */
+  }
+  a:visited {
+    color : black;
+  }
+  a:hover {
+    color : red;
+  }
+  a:active {
+    color : green;
+  }
+
+
+
+/*  */
+
+
+
+/*  */

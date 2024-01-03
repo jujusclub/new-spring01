@@ -1,0 +1,570 @@
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Pretendard-Regular';
+
+margin: 0;
+padding: 0;
+}
+
+
+body{
+height: 1300px;
+}
+/*  */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px 0; /* 상단과 하단에 여백을 추가합니다. */
+}
+/*  */
+.div-text {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+     .movet { /* tab 색 유지  */
+    background-color: rgb(20, 3, 78); /* 배경색을 원하는 색상으로 설정 */
+    color: white!important; /* 글자색을 원하는 색상으로 설정 */
+}
+.top_area {
+    display: flex;
+    justify-content: space-between; /* 좌우 정렬 및 사이 간격 유지 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    margin-bottom: 20px;
+    width: 80%; /* 너비 조절 */
+    margin: 20px auto; /* 중앙 정렬을 위한 margin 추가 */
+}
+
+	
+.top_left {
+    margin-right: 10px;
+    margin-bottom: 10px; /* 여기에 20px 대신 10px을 적용해보세요 */
+}
+
+/*	.t_name {
+  white-space: normal;  긴 텍스트에서 줄바꿈 활성화 
+  word-wrap: break-word;  긴 단어에서 줄바꿈 활성화 
+}*/
+
+  .name_star {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가운데 정렬 */
+  }
+
+.t_name {
+	width: 1000px; /* 원하는 너비로 설정하세요. */
+	margin-top: 25px;
+	text-align: center; /* 가운데 정렬 */
+/* 	align-items: center; 가운데 정렬
+	margin-right: auto;
+	margin-left:  auto; */
+}
+
+.t_name_text{
+  	overflow-wrap: break-word;
+  	/* align-items: center; 가운데 정렬 */
+}
+
+  .t_img_div {
+    /* 이미지 제일 왼쪽으로 놓기 */
+    order: 1;
+  }
+
+
+.t_img_div img {
+    /* width: 250px;
+    height: 150px; */ 
+    width: 331px;
+    height: 201px;
+    object-fit: cover;
+}
+
+  .sel_img_div {
+    /* 중간에 배치 */
+    order: 2;
+  }	
+ 
+
+
+.option_div {
+    background-color: #f4f4f4;
+    /* border: 1px solid #ddd; */
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f4f4f4;
+    order: 3;
+    height: 364px
+}
+
+.date_select{
+	display: flex;
+	margin-top: 20px; 
+	
+}
+.t_price_info{
+	display: flex; 
+	margin-top: 20px;
+}
+.people_num{
+	display: flex;
+	margin-top: 20px;
+}
+.price_cal{
+	display: flex; 
+	/* font: red; */
+}
+
+.buttons{
+	margin-top: 50px;	
+	/**/
+	display: flex; /* 버튼을 수평으로 정렬합니다. */
+	height: 36px;
+	/**/
+}
+.wishlist_btn{
+	background-color: red; 
+	color: white; 
+	padding: 10px 20px; 
+	border: none; 
+	cursor: pointer; 
+	width: 147px;
+	margin-top: 20px;
+}
+.buy_btn{
+	background-color: green; 
+	color: white; 
+	padding: 10px 20px;
+	border: none; 
+	cursor: pointer; 
+	
+	width: 147px;
+}
+
+
+/*bottom  */
+.bottom_area{
+	margin-top: 20px;
+}
+
+    .meeting_div{
+    margin-right: auto;
+    margin-left: auto;
+    }
+    
+    .map_div{
+    margin-right: auto;
+    margin-left: auto;
+    height: 230px; 
+	width: 700px; 
+    }
+    
+    .meeting-info{
+    display: flex; 
+    margin-top: 20px; 
+    }
+    
+    .meeting_spot{
+    margin-right: 30px;
+    margin-left: auto; 
+    }
+	
+	.meeting_time{
+	margin-right: auto;
+	}
+	
+	.tour_spot_div{
+	margin-bottom: 20px;
+	width: 840px;
+	}
+	
+	.tour_spot{
+	margin-top: 20px;
+	width: 840px;
+	}
+	.tour_info{
+	margin-top: 20px;
+	}
+	
+    .t-info {
+    text-align: center; /* 텍스트를 중앙 정렬합니다. */
+    margin-top: 20px; /* 필요한 여백을 조절하세요. */
+}
+
+    
+    .date_select{
+    margin-bottom: 10px;
+    }
+    
+   .tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  width: 840px;
+  /*  */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width: 33.33%;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  width: 840px; /* 탭 내용의 너비를 100%로 설정하여 고정 */
+  /* height: 500px; */
+  height: 100%;
+}
+
+/* 각 탭 내용의 스타일 수정 */
+.tabcontent p {
+  margin: 0; /* 기본 마진 제거 */
+  padding: 10px; /* 원하는 패딩 값 적용 */
+  width: 100%; /* 내용의 너비를 100%로 설정하여 고정 */
+  height: 100%;
+}  
+
+/* 담당 가이드 */
+
+
+
+.guide-table {
+    text-align: center;
+}
+
+.guide-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+}
+
+.image-cell img {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.guide_info_div {
+    height: 150px;
+    display: flex;
+    flex-direction: column; /* flex 아이템을 세로로 나열 */
+}
+
+.guide_name_div {
+    display: flex;
+    flex-wrap: wrap; /* 여러 열로 나열되도록 설정 */
+}
+
+.guide_item {
+	display: flex;
+}
+
+.data-cell {
+    flex: 1; /* 가변 너비 설정 */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    width: 250px; /* 기본 값으로 설정 */
+}
+
+.label-cell {
+    width: 120px;
+    height: 50px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 1px;
+}
+
+
+/*/
+/* 별점 */
+
+/* 해당 부분을 중앙에 배치하도록 스타일 업데이트 */
+
+.text-bold {
+    margin-right: 50px;
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 20px; /* 원하는 상단 여백 설정 */
+    margin-left: 30px;
+}
+
+.tour-rating-star {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가운데 정렬 */ 
+    /* margin-top: 20px; 원하는 상단 여백 설정 */
+}
+/*  */
+.tour-rating-star span::before {
+  content: "★"; /* 별 모양 문자(★)를 content에 추가합니다 */
+  color: rgba(250, 208, 0, 0.99); /* 별 모양 문자의 색상을 노란색으로 설정합니다 */
+  margin-right: 5px; /* 별 모양 문자와 평점 값 사이의 간격을 조절합니다 */
+}
+/*  */
+.star-div {
+    display: flex;
+    flex-direction: row-reverse; /* 별점을 오른쪽에서 왼쪽으로 정렬 */
+}
+
+.star-div input[type="radio"] {
+    display: none;
+}
+
+.star-div label {
+    font-size: 3em;
+    color: transparent;
+    text-shadow: 0 0 0 #333;
+    cursor: pointer;
+}
+
+.star-div label:hover {
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+
+.star-div label:hover ~ label {
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+
+.star-div input[type="radio"]:checked ~ label {
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+
+
+#rating_comment fieldset{
+    display: inline-block;
+    /* direction: rtl; */
+    border:0;
+}
+#rating_comment fieldset legend{
+    text-align: right;
+}
+#rating_comment input[type=radio]{
+    display: none;
+}
+#rating_comment label{
+    /* font-size: 3em; */
+	font-size: 30px;
+    color: transparent;
+    text-shadow: 0 0 0 #333;
+}
+
+#rating_comment label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#rating_comment label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#rating_comment input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#reviewContents {
+    width: 100%;
+    /* height: 150px; */
+    height: 75px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 1.5px #D3D3D3;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+/*댓글창*/
+    .review-form-container {
+        width: 900px;
+        margin: 0 auto; /* 가운데 정렬 */
+        background: #f8f8f8;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        /* height: 180px; */
+        height: 165px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+    }
+
+    .review-write-btn {
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    display: block; /* 블록 요소로 설정 */
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+    }
+    
+
+/*댓글*/
+     	 .review-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .review-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .review-table th {
+			border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #f2f2f2;
+            text-align: center; /* <th> 요소의 텍스트 가운데 정렬 */
+        }
+        .star-rating {
+		    font-size: 10px; /* 댓글의 별 크기를 조절합니다. */
+			display: inline-block;
+		}
+		
+		.t_review_div{
+		width: 1000px;
+		max-width: 1000px;
+		}
+/*댓글 목록에 숫자, 이전, 다음 버튼  */
+.pagination-container {
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 10px; /* 원하는 위치로 조정 */
+}
+
+.pagination-container a {
+    margin: 0 5px; /* 페이지 번호 간격 조정 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.current-page {
+    font-weight: bold; /* 현재 페이지 강조 스타일 */
+}
+
+/*  */
+
+    /* 호텔 컨테이너 스타일 */
+    .hotel-container {
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    /* 호텔 카드 스타일 */
+    .hotel-card {
+        width: 280px;
+        height: 280px;
+        border: 1px solid #ccc;
+        margin-right: 5px;
+        margin-left: 5px;
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 호텔 이미지 스타일 */
+    .hotel-img img {
+        width: 100%;
+        height: 180px;
+
+    }
+    
+.hotel-img {
+    overflow: hidden; /* 내용을 넘어가는 부분 숨기기 */
+}
+
+.hotel-img img:hover {
+    transform: scale(1.35);
+}
+
+    /* 호텔 정보 스타일 */
+    .hotel-info {
+        height: 100px;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* 호텔 이름 스타일 */
+    .hotel-name {
+        font-weight: bold;
+    }
+
+		.t_name2{
+		width: 190px;
+		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+		max-width: 100%;
+		text-overflow: ellipsis;				
+		}
+		
+  .div-text a:hover {
+    color : red;
+  }
+  
+  .guide_introduce a:hover {
+    color : red;
+  }
+  
+  .hotel-list a:hover {
+    color : red;
+  }
+  		
+  
+  /* 노란 별 스타일 */
+.yellow-star {
+    color: gold; /* 또는 다른 원하는 노란색 */
+    font-size: 20px
+}
+
+/* 회색 별 스타일 */
+.gray-star {
+    color: gray; /* 또는 다른 원하는 회색 */
+    font-size: 20px;
+    }

@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Pretendard-Regular';
+  cursor: pointer;
+}
+
+body {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  width: 1903px;
+  height:1200px;
+
+}
+  .movec {
+    background-color: rgb(20, 3, 78); /* 배경색을 원하는 색상으로 설정 */
+    color: white!important; /* 글자색을 원하는 색상으로 설정 */
+}
+
+/*-------------------------------커뮤니티 입력----------------------------*/
+
+.c_modify_main{ /*작성 폼전체*/
+  border:solid 1px rgb(20, 3, 78);
+  width:  1050px;
+  height: 900px;
+  margin-left: 425px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+}
+.c_modify_main h2 { 
+  width:  1020px;
+  height: 50px;
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-left: 30px;
+  background-color: rgb(20, 3, 78);
+  color:#fff;
+  text-align: center;
+}
+
+.c_info_div{/*작성자 + 닐짜*/
+
+  width:  1050px;
+  height: 30px;
+  margin-left: 50px;
+  margin-top: 40px;
+  font-size: 13px;
+}
+.c_writer_div{/*작성자*/
+
+  width:  220px;
+  height: 20px;
+  margin-left: 0px;
+  
+}
+.c_writer{
+  width:  150px;
+  height: 20px;
+  margin-left: 0px;
+}
+
+.c_date_div{/*날짜*/
+
+  width:  280px;
+  height: 20px;
+  margin-left: 210px;
+  margin-top: -15px;
+}
+.c_date{/*디비 현재시간으로 자동설정 부여*/
+
+  width:  200px;
+  height: 20px;
+  margin-left: 60px;
+  margin-top: -15px;
+}
+.c_num_div{/*글번호*/
+
+  width:  120px;
+  height: 20px;
+  margin-left: 480px;
+  margin-top: -20px;
+  }
+.c_num{/*글번호 디비 자동부여*/
+ 
+  width:  60px;
+  height: 20px;
+  margin-left: 55px;
+  margin-top: -15px;
+}
+
+.c_title_div{/*제목*/
+ 
+  width:  1100px;
+  height: 40px;
+  margin-left: 50px;
+  margin-top: 20px;
+  }
+  .c_title{
+  width:  900px;
+  height: 30px;
+  }
+.c_city_div{
+
+  width:  1000px;
+  height: 30px;
+  margin-left: 90px;
+  margin-top: 10px;
+}  
+.c_country{
+  width:200px;
+  height: 30px;
+}
+.c_city{
+  width:200px;
+  height: 30px;
+  margin-left: 200px;
+  margin-top: -30px;
+}
+
+.c_con_div{ /*글 내용*/
+ 
+  width:  900px;
+  height: 400px;
+  margin-left: 75px;
+  margin-top: 10px;
+}
+.c_con{/*글내용 작성*/
+  width:  900px;
+  height: 400px;
+  resize: none;
+}
+.c_pho_title{
+  width:  600px;
+  height: 20px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.c_pho1_div{/*사진 첨부파일*/
+
+  width:  600px;
+  height: 30px;
+  margin-left: 100px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.c_pho_div{/*사진 첨부파일*/
+
+  width:  600px;
+  height: 30px;
+  margin-left: 100px;
+  font-size: 13px;
+}
+.c_pho{/*사진 이름 작성란*/
+  width:  350px;
+  height: 20px;
+  margin-left: 5px;
+} 
+.c_btns{
+	
+	width:  900px;
+    height: 50px;
+}
+.c_btns2{
+	
+	width:  200px;
+    height: 50px;
+     margin-left: 830px;
+  margin-top: -50px;
+}
+.c_modifybtn{
+ background-color:#555;
+ color:white;
+  width:  90px;
+  height: 20px;
+  margin-left: 480px;
+  margin-top: 30px;
+}
+
+.c_to_listbtn{
+	 background-color:#555;
+	 color:white;
+	 width:  90px;
+  height: 20px;
+  margin-top: 30px;
+  float: right;
+}
+.c_modifybtn:hover, .c_to_listbtn:hover{
+	 background-color:#111;
+}
+#footer{
+	margin-top: 100px;
+}
+

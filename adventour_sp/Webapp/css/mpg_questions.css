@@ -1,0 +1,468 @@
+/* mypage_questions.css */
+
+/*메인 전체 박스*/
+.alMainB{
+    width: 1050px;
+    height: 1050px;
+    margin: 50px 425px 0px 440px;
+    border-width: 0px;
+}
+/*-------메인페이지 텍스트 박스--------*/
+.mainTB {
+    width: 1050px;
+    height: 50px;
+    padding-left: 250px;
+    border-width: 0px;
+    font-weight: bold;
+}
+
+.mainTB p{
+    width: 800px;
+    height: 50px;
+    float: left;
+    font-size: 25px;
+    margin: 0px 0px 0px 0px;
+}    
+/* --------메인 네비와 컨텐츠를 컨테인한 박스------- */
+.mainNCB{
+    display: flex;
+}
+
+/*마이페이지 문의하기 버튼*/
+.mainNB nav:last-child {
+    color: white!important;
+    border-top-width: 0px!important;
+    border-right-width: 1px!important;
+    background-color: rgb(20, 3, 78, 0.6)!important;
+}
+
+/*----------문의 사항의 시작! 제일 큰 박스----------*/
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*-- 문의 사항의 시작! 제일 큰 박스----*/
+
+.frst_lne_ctgry div:hover{
+	color: white;
+
+}
+
+/*문의사항 페이지를 모두 감싸는 박스*/
+.questionbox{
+    margin: 0px  0px 0px 50px;
+    width: 799px;
+    float: left;
+}
+
+/*대문글 박스*/
+.intro_tB p{
+    width: 795px;
+    height: 50px;    
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    padding: 5px 0px 0px 3px;
+    border-width: 0px;
+    background-color: rgb(171 152 245);
+}
+/* 첫 번째 탭 기능을 넣을 친구들 전체 박스 */
+.frst_lne_ctgry{
+    width: 700px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-left:93px;
+	border: 1px solid black;
+}
+/* 탭 기능을 넣을 친구들 개별 박스 */
+.frst_lne_ctgry p{
+    width: 200px;
+    height: 35px; 
+    float: left;
+	padding-top: 5px; 
+	cursor: pointer;
+}
+/* 두 번째 탭 기능을 넣을 친구들 전체 박스 */
+.sec_lne_ctgry{
+    width: 795px;
+    float: left;
+    border: solid black;
+    border-width: 0px 1px 1px 0px;
+}
+
+/* 탭 기능을 넣을 친구들 개별 박스 */
+.secLTab p{
+    width: 130.5px;
+    height: 28px; 
+    float: left;
+    cursor: pointer;
+    padding-top: 2px;
+    text-align: center;
+    border: solid black;
+    border-width: 0px 0px 0px 1px;
+}
+
+/*--------------자주하는 qna 시작----------------*/
+.usual_qna_ttle h3{
+   width: 795px;
+   height: 30px;
+   float: left;
+   padding-top: 5px;
+   text-align: center;
+   border: solid black;
+   border-width: 1px 0px 0px 1px;
+}
+/*---------------------------------투어-------------------------------------*/
+.t_qna_all{
+	width: 795px;
+	float: left;
+	border: solid black;
+	border-width: 0px 0px 0px 1px;
+}
+
+.t_qna{
+   width: 795px;
+   float: left;
+}
+.t_Q{
+   width: 795px;
+   float: left;
+   font-size: 17px;
+   font-weight: bold;
+   padding: 5px 0px 5px 5px;
+   border: solid black;
+   border-width: 0.5px 0px 0.5px 0px;
+}
+.t_A{
+   width: 795px;
+   float: left;
+}
+
+/*---------------------------------버스-------------------------------------*/
+.b_qna_all{
+	width: 795px;
+	float: left;
+	border: solid black;
+	border-width: 0px 0px 0px 1px;
+}
+
+.b_qna{
+   width: 795px;
+   float: left;
+}
+.b_Q{
+   width: 795px;
+   float: left;
+   font-size: 17px;
+   font-weight: bold;
+   padding: 5px 0px 5px 5px;
+   border: solid black;
+   border-width: 0.5px 0px 0.5px 0px;
+}
+.b_A{
+   width: 795px;
+   float: left;
+}
+
+/*---------------------------------호텔-------------------------------------*/
+.h_qna_all{
+	width: 795px;
+	float: left;
+	border: solid black;
+	border-width: 0px 0px 0px 1px;
+}
+
+.h_qna{
+   width: 795px;
+   float: left;
+}
+.h_Q{
+   width: 795px;
+   float: left;
+   font-size: 17px;
+   font-weight: bold;
+   padding: 5px 0px 5px 5px;
+   border: solid black;
+   border-width: 0.5px 0px 0.5px 0px;
+}
+.h_A{
+   width: 795px;
+   float: left;
+}
+
+/*---------------------------------쇼핑-------------------------------------*/
+.s_qna_all{
+	width: 795px;
+	float: left;
+	border: solid black;
+	border-width: 0px 0px 0px 1px;
+}
+
+.s_qna{
+   width: 795px;
+   float: left;
+}
+.s_Q{
+   width: 795px;
+   float: left;
+   font-size: 17px;
+   font-weight: bold;
+   padding: 5px 0px 5px 5px;
+   border: solid black;
+   border-width: 0.5px 0px 0.5px 0px;
+}
+.s_A{
+   width: 795px;
+   float: left;
+}
+
+/*---------------------------------주문/결제-------------------------------------*/
+.oP_qna_all{
+	width: 795px;
+	float: left;
+	border: solid black;
+	border-width: 0px 0px 0px 1px;
+}
+
+.oP_qna{
+   width: 795px;
+   float: left;
+}
+.oP_Q{
+   width: 795px;
+   float: left;
+   font-size: 17px;
+   font-weight: bold;
+   padding: 5px 0px 5px 5px;
+   border: solid black;
+   border-width: 0.5px 0px 0.5px 0px;
+}
+.oP_A{
+   width: 795px;
+   float: left;
+}
+
+/*---------------------------------회원서비스-------------------------------------*/
+.cs_qna_all{
+	width: 795px;
+	float: left;
+	border: solid black;
+	border-width: 0px 0px 0px 1px;
+}
+
+.cs_qna{
+   width: 795px;
+   float: left;
+}
+.cs_Q{
+   width: 795px;
+   float: left;
+   font-size: 17px;
+   font-weight: bold;
+   padding: 5px 0px 5px 5px;
+   border: solid black;
+   border-width: 0.5px 0px 0.5px 0px;
+}
+.cs_A{
+   width: 795px;
+   float: left;
+}
+/*----------------------문의내역----------------------*/
+/*문의 내역 전체 박스*/
+.my_qna{
+   width: 798px;
+   height: 740px;   
+   float: left;
+   font-size: 14px;
+   margin-top: 10px;
+}
+/*내 문의 리스트*/
+.my_qna_listB{
+   width: 240px;
+   height: 730px;   
+   float: left;
+   padding-left: 10px;
+   border: 1px solid black;
+}
+
+/*내 문의 리스트 개별박스*/
+.myqnaCkB{
+   width: 240px;
+   float: left;
+   margin: 15px 0px 0px 10px;
+}
+/*디비에 저장된 문의를 담는 틀. */
+ lable{
+	width: 220px;
+	height: 30px;
+	float: left;
+	font-size: 18px!important;
+	font-weight: bold;
+}
+/*답변확인 텍스트 박스*/
+.myqnaCkB p{
+   width: 200px;   
+   float: left;
+   font-size: 12px;
+}
+
+
+/*내문의 리스트의 고객 안내 텍스트*/
+.text_box h3{
+   width: 220px;
+   height: 60px;   
+   float: left;
+   margin: 20px 0px 10px 10px; 
+}
+
+.text_box h5{
+   width: 210px;
+   height: 30px;   
+   float: left;
+   margin: 0px 10px 10px 10px; 
+}
+/*qna_dtail_box(문의 내역 클릭하면 자세하게 보이는 애들)*/
+.qna_dtail_box{
+   width: 540px;
+   height: 730px;   
+   float: left;
+   border: solid black;
+   border-width: 1px 1px 1px 0px;
+}
+
+.qna_dtail_box_band{
+   width: 440px;
+   height: 430px;   
+   float: left;
+   font-size: 16px;
+   margin: 50px 0px 0px 40px;
+}
+
+.myquestion{
+   width: 435px;
+   height: 220px;   
+   float: left;
+   padding: 5px 0px 5px 5px;
+}
+.answer_box{
+   width: 435px;
+   height: 220px;
+   float: left;
+   padding: 5px 0px 5px 15px;
+   margin: 50px 0px 20px 0px;
+}
+
+.qna_dtail_box h4{
+   width: 435px;
+   float: left;
+   margin-bottom: 20px;
+}
+
+.qna_dtail_box p{
+   width: 435px;
+   height: 100px;
+   float: left;
+   margin-bottom: 20px;
+}
+
+/*새문의 남기기 버튼*/
+.go_write_btn{
+   width: 170px;
+   height: 40px;
+   float: right;
+}
+
+
+/*----------------------문의내역----------------------*/
+
+/*--------------------- 폼 박스---------------------- */
+/*문의하기 탭 클릭시 보여지는 전체 박스*/
+.write{
+	width: 795px;
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+    
+
+}
+/*고객에게 양해 구하는 텍스트 전체박스*/
+.qna_wrte_txt{
+	width: 795px;
+	float: left;
+	padding: 10px 0px 10px 30px; 
+}
+/*위 클래스에 간격주고 싶어서 패딩*/
+.qna_wrte_txt h5,.qna_wrte_txt h6{
+	padding: 10px 0px 10px 5px; 
+}
+.qna_info{
+	width: 795px;
+	float: left;
+	font-weight: bold;
+	padding-bottom: 10px;
+	border: 1px solid ;
+/*	 border-width: 0px 0px 0px 0px; */
+}
+/* 폼 스타일 */
+.qna_selBox{
+	width: 200px;
+	height: 36px;
+}
+
+.qna_ttl_box{
+	width: 510px;
+	height: 30px;
+}
+.qna_cntt_box{
+	width: 720px;
+	height: 370px;
+	resize: none;
+}
+.qna_img_box{
+	width: 720px;
+	height: 30px;
+}
+.qna_btn{
+	width: 80px;
+	height: 35px;
+}
+
+/*---------마진 클래스들.-----------*/
+.margin_t_lft{
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+.margin_lft60{
+	margin-top: 15px;
+	margin-left: 300px;
+}
+.padding_left5{
+	padding-left: 5px;
+}
+.padding_top10{
+	padding_top: 10px;
+}
+.padding_top20{
+	padding_top: 20px;
+}
+.font{
+	font-size: 20px;
+	font-weight: bold;
+}
+/*배경에 클래스로 스타일을 준다.*/
+.col_style{
+	color: #555;
+	
+	
+}
+.
+/*--------------------- 폼 박스---------------------- */
+/*----------문의 사항의 시작! 제일 큰 박스----------*/
