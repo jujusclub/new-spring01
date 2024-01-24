@@ -132,74 +132,32 @@ body {
 	border-width: 0;
 }
 
-.h_outdateY{
-	width: 220px;
-	height: 40px;
-	padding-top: 1px;
-	border-radius: 5px;
-	margin-right: 0px;
-}
 
 .h_indateY {
-	width: 100px;
+	width: 260px;
 	height: 40px;
 	padding-top: 1px;
-	border-radius: 5px 0px 0px 5px;
+	border-radius: 5px 5px 5px 5px;
 	border-width: 0;
 }
 
-.h_indateM {
-	width: 70px;
-	height: 40px;
-	padding-top: 1px;
-	border-width: 0;
-	margin-left:-5px;
-
-}
-
-.h_indateD {
-	width: 70px;
-	height: 40px;
-	padding-top: 1px;
-	border:solid 2px;
-	border-color:white;
-	border-radius: 0px 5px 5px 0px;
-	margin-right: 20px;
-	margin-left:-5px;
-}
 
 .h_outdateY {
-	width: 100px;
+	width: 260px;
 	height: 40px;
 	padding-top: 1px;
-	border-radius: 5px 0px 0px 5px;
+	border-radius: 5px 5px 5px 5px;
 	border-width: 0;
+	margin-left: 15px;
 }
 
-.h_outdateM {
-	width: 70px;
-	height: 40px;
-	padding-top: 1px;
-	border-width: 0;
-		margin-left:-5.0px;
-}
-
-.h_outdateD {
-	width: 70px;
-	height: 40px;
-	padding-top: 1px;
-	border-width: 0;
-	border-radius: 0px 5px 5px 0px;
-	margin-right: 20px;
-	margin-left:-5.2px;
-}
 
 .h_maintpeo {
 	width: 70px;
 	height: 40px;
 	padding-top: 1px;
 	border-radius: 5px;
-	margin-right: 0px;
+	margin-left: 15px;
 	margin-right: 20px;
 }
 

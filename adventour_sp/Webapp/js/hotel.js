@@ -64,9 +64,7 @@ $(document).ready(function() {
 	
 	$('.h_indateM').on('change', function() {
 	    var MM = $(this).val();
-	    
-
-	    
+	        
 	    if (MM === '1' || MM === '3' || MM === '5' || MM === '7' || MM === '8' || MM === '10'|| MM === '12') {
 	        for (var i = 01; i < 32; i++) {
 	            $('.h_indateD').append('<option value="' + i + '">' + i + '</option>');
@@ -84,9 +82,7 @@ $(document).ready(function() {
 	
 	$('.h_outdateM').on('change', function() {
 	    var MM = $(this).val();
-	    
-
-	    
+	     
 	    if (MM === '1' || MM === '3' || MM === '5' || MM === '7' || MM === '8' || MM === '10'  || MM === '12') {
 	        for (var i = 01; i < 32; i++) {
 	            $('.h_outdateD').append('<option value="' + i + '">' + i + '</option>');
@@ -203,20 +199,34 @@ imageClasses.forEach(function(className) { //마우스오버
      return new Date(year, month - 1, day); // Date 객체로 반환
  }
 
- // 검색시 날짜 비교 및 안내 메시지 표시
+ // 날짜를 YYYY-MM-DD 형식으로 포맷하는 함수
+ function formatDate(date) {
+     var year = date.getFullYear();
+     var month = String(date.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 +1
+     var day = String(date.getDate()).padStart(2, '0');
+     return `${year}-${month}-${day}`;
+ }
 
+ // 검색 시 날짜 비교 및 안내 메시지 표시
  $('form[name="h_main_sch_form"]').on('submit', function(event) {
-	    var currentDate = getCurrentDate();
-	    var mh_indate = new Date($('.h_indateY').val(), $('.h_indateM').val() - 1, $('.h_indateD').val()); 
-	    var mh_outdate = new Date($('.h_outdateY').val(), $('.h_outdateM').val() - 1, $('.h_outdateD').val()); 
+     var currentDate = getCurrentDate();
+     var mh_indate = new Date($('.h_indateY').val());
+     var mh_outdate = new Date($('.h_outdateY').val());
 
-	    if (mh_indate < currentDate || mh_outdate < currentDate) {
-	        alert("과거 날짜는 선택할 수 없습니다. 날짜를 다시 확인하세요.");
-	        event.preventDefault(); // 폼 제출 차단
-	    } else if (mh_indate > mh_outdate) {
-	        alert("체크아웃 날짜는 체크인 날짜 이후여야 합니다. 날짜를 다시 확인하세요.");
-	        event.preventDefault(); // 폼 제출 차단
-	    }  
+     // 날짜 포맷팅
+     var formattedIndate = formatDate(mh_indate);
+     var formattedOutdate = formatDate(mh_outdate);
+
+     //alert(formattedIndate); 확인 ok
+     //alert(formattedOutdate);  확인 ok
+
+     if (mh_indate < currentDate || mh_outdate < currentDate) {
+         alert("과거 날짜는 선택할 수 없습니다. 날짜를 다시 확인하세요.");
+         event.preventDefault(); // 폼 제출 차단
+     } else if (mh_indate > mh_outdate) {
+         alert("체크아웃 날짜는 체크인 날짜 이후여야 합니다. 날짜를 다시 확인하세요.");
+         event.preventDefault(); // 폼 제출 차단
+     }
  });
 
 //숫자에 콤마 찍기

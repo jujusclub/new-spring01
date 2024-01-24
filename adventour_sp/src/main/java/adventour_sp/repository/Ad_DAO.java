@@ -158,9 +158,25 @@ public class Ad_DAO {
 	    return hotel_info;
 	} 
     
+
     
-    
-    
+	public List<Ad_VO> h_main_sch (Ad_VO vo) throws Exception { 
+	    
+		List<Ad_VO> h_main_sch = sqlSession.selectList("select_main_search", vo);
+		
+		//확인 ok
+//	    System.out.println(vo.getH_indateY());
+//	    System.out.println(vo.getH_outdateY());
+//	    System.out.println(vo.getCity_eng());
+//	    System.out.println(vo.getCountry_eng());
+//	    
+//	    for (Ad_VO adVO : h_main_sch) { // 셀렉이 잘 됐는지 확인하는 방법
+//       System.out.println("DAO 확인1 " + adVO.getH_name_eng());
+//       System.out.println( "DAO 확인2 " +adVO.getH_name_ko());
+//   }
+
+	    return h_main_sch;
+	}  
     
     
     

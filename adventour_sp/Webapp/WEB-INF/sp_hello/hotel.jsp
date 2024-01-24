@@ -6,46 +6,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>호텔 메인 인덱스 </title>
+    <meta charset="UTF-8">
+    <title>호텔 메인 인덱스 </title>
 
-<link rel="stylesheet" type="text/css" href="css/hotel.css">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="js/hotel.js"></script>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI6rnQo4xB7Q2qJQfzN86WvL8JGPz_esg&callback=initMap"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="css/hotel.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/hotel.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 </head>
-<script>
-$(document).ready(function() {
-	//헤더 푸터 로드
-	$("#header").load("header");
-	$("#footer").load("footer");
-});
-</script>
+    <script>
+        $(document).ready(function() {
+            // id="loginin" 값이 null이면 로그인 필요 메시지 출력
+            
+            if ($("#loginin").val() == null || $("#loginin").val() === '') {
+                $("#header").load("header");
+            } else {
+                $("#login_header").load("login_header");
+            }
+            $("#footer").load("footer");
+        });
+    </script>
 <body>
 
-	<header>
-<!-- 
-		<%
-if (session.getAttribute("id") == null) {
-%>
-		<!-- header.html import -->
-		<div id="header"></div>
-		<%
-} else {
-%>
-		<jsp:include page="header_login.jsp"></jsp:include>
-		<%
-}
-%>
-	</header>
+
+    <header>
+        <input type="hidden" id="loginin" value="${sessionScope.id}">
+        <%
+            // 세션에서 id를 가져와서 로그인 여부 확인
+            String id = (String) session.getAttribute("id");
+
+            if (id == null || id.isEmpty()) {
+        %>
+            <!-- 로그인되지 않은 경우 -->
+            <div id="header"></div>
+        <%
+            } else {
+        %>
+            <!-- 로그인된 경우 -->
+            <div id="login_header"></div>
+        <%
+            }
+        %>
+    </header>
+
+
+
 	
-	
-<form name="h_main_sch_form" action="mainsch.hotel?uname=hotelSearch" method="post" >
+<form name="h_main_sch_form" action="hotel_search" method="post" >
 	<div class="busmain">
 		<img class="busmainpic" src="image/img/hotel01.jpg">
 		<div class="b_piccont">
@@ -82,56 +91,13 @@ if (session.getAttribute("id") == null) {
 					<option value="barcelona">바르셀로나</option>
 					<option value="sevilla">세비야</option>
 				</select> 
-				<select id="h_indateY" class="h_indateY" name="h_indateY" placeholder="체크인">
-					<option value="">년</option>
-					<option value="2023">2023</option>
-					<option value="2024">2024</option>
-				</select> 
-				<select id="h_indateM" class="h_indateM" name="h_indateM" placeholder="체크인">
-					<option value="">월</option>
-					<option value="01">1</option>
-					<option value="02">2</option>
-					<option value="03">3</option>
-					<option value="04">4</option>
-					<option value="05">5</option>
-					<option value="06">6</option>
-					<option value="07">7</option>
-					<option value="08">8</option>
-					<option value="09">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
+				<input type="date" id="h_indateY" class="h_indateY" name="h_indateY" 
+				 min="2024-01-01" max="2025-12-31" placeholder="체크인">
 
-				</select> 
-				<select id="h_indateD" class="h_indateD" name="h_indateD" placeholder="체크인">
-					<option value="">일</option>
+ 
+				<input type="date" id="h_outdateY" class="h_outdateY" name="h_outdateY" 
+				min="2024-01-01" max="2025-12-31" placeholder="체크아웃">
 
-				</select> 
-				<select id="h_outdateY" class="h_outdateY" name="h_outdateY" placeholder="체크아웃">
-					<option value="">년</option>
-					<option value="2023">2023</option>
-					<option value="2024">2024</option>
-				</select>
-				 <select id="h_outdateM" class="h_outdateM" name="h_outdateM" placeholder="체크아웃">
-					<option value="">월</option>
-					<option value="01">1</option>
-					<option value="02">2</option>
-					<option value="03">3</option>
-					<option value="04">4</option>
-					<option value="05">5</option>
-					<option value="06">6</option>
-					<option value="06">7</option>
-					<option value="08">8</option>
-					<option value="09">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-
-				</select> 
-				<select id="h_outdateD" class="h_outdateD" name="h_outdateD" placeholder="체크아웃">
-					<option value="">일</option>
-
-				</select>
 				
 				 <select id="h_mainpeo" class="h_maintpeo" name="h_mainpeo" placeholder="총 인원수">
 				    <option value="1">1</option>
@@ -189,7 +155,7 @@ for (int i = 0; i < list.size(); i++) {
 
 %>
 			<div class="swiper-slide">
-								<a name="<%= aaa.getH_name_eng() %>" href="information.hotel?uname=hotelinfom&hotelname=<%= aaa.getH_name_eng() %>">
+								<a name="<%= aaa.getH_name_eng() %>" href="/adventour_sp/hotel_info?h_name=<%= aaa.getH_name_eng() %>">
 									<img class="top<%= i + 1 %>"
 									src="image/hotel/h_image/<%= aaa.getH_pho() %>" alt="" />
 									<p class="top_contry"><%= aaa.getCountry_ko() %> - <%= aaa.getCity_ko() %></p>
@@ -226,24 +192,27 @@ for (int i = 0; i < list.size(); i++) {
 
 			<div class="h_recityimgs">
 
-				<a href="main.hotel?uname=uk">
+				<a href="/adventour_sp/hotel_list?city=uk">
 					<div class="ukimg">
 						<img class="h_recityimg1" src="image/img/uk.png">
 						<div class="ukname">
 							<h2>영국</h2>
 						</div>
 					</div>
-				</a> <a href="main.hotel?uname=italy">
+				</a>
+                <a href="/adventour_sp/hotel_list?city=italy">
 					<div class="ityimg">
 						<img class="h_recityimg2" src="image/img/ity.png">
 						<h2 class="ityname">이탈리아</h2>
 					</div>
-				</a> <a href="main.hotel?uname=france">
+				</a> 
+				<a href="/adventour_sp/hotel_list?city=france">
 					<div class="fraimg"">
 						<img class="h_recityimg3" src="image/img/fra.png">
 						<h2 class="franame">프랑스</h2>
 					</div>
-				</a> <a href="main.hotel?uname=spain">
+				</a> 
+				<a href="/adventour_sp/hotel_list?city=spain">
 					<div class="spaimg">
 						<img class="h_recityimg4" src="image/img/spain.png">
 						<h2 class="spaname">스페인</h2>

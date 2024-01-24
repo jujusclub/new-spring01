@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import adventour_sp.VO.Ad_VO;
 import adventour_sp.repository.Ad_DAO;
@@ -81,4 +82,16 @@ public class Ad_service {
 	
 	return hotel_info;
 	}
+	
+	public List<Ad_VO> h_main_sch(Ad_VO vo) throws Exception  {
+		List<Ad_VO> h_main_sch = ad_DAO.h_main_sch(vo);
+		
+//		System.out.println("서비스 확인"+vo.getH_indateY()); 확인 ok
+//	    System.out.println(vo.getH_outdateY());
+//	    System.out.println(vo.getCity_eng());
+//	    System.out.println(vo.getCountry_eng());
+		
+		return h_main_sch;
+	}
+	
 }

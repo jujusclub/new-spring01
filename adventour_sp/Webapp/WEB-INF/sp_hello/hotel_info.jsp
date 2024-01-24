@@ -34,11 +34,7 @@ function getCookie(name) {
 var h_mainde = getCookie("h_mainde");
 var h_maincity = getCookie("h_maincity");
 var h_indateY = getCookie("h_indateY");
-var h_indateM = getCookie("h_indateM");
-var h_indateD = getCookie("h_indateD");
 var h_outdateY = getCookie("h_outdateY");
-var h_outdateM = getCookie("h_outdateM");
-var h_outdateD = getCookie("h_outdateD");
 var h_mainpeo = getCookie("h_mainpeo");
 var night_time = getCookie("night_time");
 

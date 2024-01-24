@@ -44,11 +44,7 @@ function getCookie(name) {
 var h_mainde = getCookie("h_mainde");
 var h_maincity = getCookie("h_maincity");
 var h_indateY = getCookie("h_indateY");
-var h_indateM = getCookie("h_indateM");
-var h_indateD = getCookie("h_indateD");
 var h_outdateY = getCookie("h_outdateY");
-var h_outdateM = getCookie("h_outdateM");
-var h_outdateD = getCookie("h_outdateD");
 var night_time = getCookie("night_time");
 
 alert(" 5번 호텔 스케쥴 박수 "+night_time); //ok
@@ -248,11 +244,7 @@ if(h_mainpeo != null){
    --> 
 <!-- 쿠키 값 확인 끝 -->   
    
-   
-   
-   
-   
-   
+
      <%
     String city_ko = "";
 	city_ko = request.getParameter("city");
@@ -314,8 +306,8 @@ if (list != null) {
          <div class="h_prices">
           <h2 class="h_tiprice"><%= ukAll.getMin_h_roompri() %> ~ </h2>
           <a href="/adventour_sp/hotel_info?h_name=<%= ukAll.getH_name_eng() %>">
-          <input type="button" class="move_h" name="move_h" value="호텔 보기" href="/adventour_sp/hotel_info?h_name=<%= ukAll.getH_name_eng() %>" style="cursor: pointer;"/>
-          
+          <input type="button" class="move_h" name="move_h" value="호텔 보기" 
+          href="/adventour_sp/hotel_info?h_name=<%= ukAll.getH_name_eng() %>" style="cursor: pointer;"/>          
           </a>
          </div>
 

@@ -54,7 +54,7 @@
 
 
 	
-<form name="h_main_sch_form" action="mainsch.hotel?uname=hotelSearch" method="post" >
+<form name="h_main_sch_form" action="hotel_search" method="post" >
 	<div class="busmain">
 		<img class="busmainpic" src="image/img/hotel01.jpg">
 		<div class="b_piccont">
@@ -91,56 +91,13 @@
 					<option value="barcelona">바르셀로나</option>
 					<option value="sevilla">세비야</option>
 				</select> 
-				<select id="h_indateY" class="h_indateY" name="h_indateY" placeholder="체크인">
-					<option value="">년</option>
-					<option value="2023">2023</option>
-					<option value="2024">2024</option>
-				</select> 
-				<select id="h_indateM" class="h_indateM" name="h_indateM" placeholder="체크인">
-					<option value="">월</option>
-					<option value="01">1</option>
-					<option value="02">2</option>
-					<option value="03">3</option>
-					<option value="04">4</option>
-					<option value="05">5</option>
-					<option value="06">6</option>
-					<option value="07">7</option>
-					<option value="08">8</option>
-					<option value="09">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
+				<input type="date" id="h_indateY" class="h_indateY" name="h_indateY" 
+				 min="2024-01-01" max="2025-12-31" placeholder="체크인">
 
-				</select> 
-				<select id="h_indateD" class="h_indateD" name="h_indateD" placeholder="체크인">
-					<option value="">일</option>
+ 
+				<input type="date" id="h_outdateY" class="h_outdateY" name="h_outdateY" 
+				min="2024-01-01" max="2025-12-31" placeholder="체크아웃">
 
-				</select> 
-				<select id="h_outdateY" class="h_outdateY" name="h_outdateY" placeholder="체크아웃">
-					<option value="">년</option>
-					<option value="2023">2023</option>
-					<option value="2024">2024</option>
-				</select>
-				 <select id="h_outdateM" class="h_outdateM" name="h_outdateM" placeholder="체크아웃">
-					<option value="">월</option>
-					<option value="01">1</option>
-					<option value="02">2</option>
-					<option value="03">3</option>
-					<option value="04">4</option>
-					<option value="05">5</option>
-					<option value="06">6</option>
-					<option value="06">7</option>
-					<option value="08">8</option>
-					<option value="09">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-
-				</select> 
-				<select id="h_outdateD" class="h_outdateD" name="h_outdateD" placeholder="체크아웃">
-					<option value="">일</option>
-
-				</select>
 				
 				 <select id="h_mainpeo" class="h_maintpeo" name="h_mainpeo" placeholder="총 인원수">
 				    <option value="1">1</option>

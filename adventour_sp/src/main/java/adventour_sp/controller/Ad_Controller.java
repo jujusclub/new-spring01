@@ -5,6 +5,8 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -129,7 +131,7 @@ public class Ad_Controller {
         return "WEB-INF/sp_hello/hotel.jsp";
     }
     
-    @RequestMapping("/hotel_list")
+    @RequestMapping("/hotel_list")//인덱스에서 바로 나라별 리스트
     public String city_list(@RequestParam String city, Model model) throws Exception {
 
     	List<Ad_VO> city_list = ad_service.city_list(city);
@@ -141,7 +143,7 @@ public class Ad_Controller {
         return "WEB-INF/sp_hello/hotel_sc.jsp";
     }
     
-    @RequestMapping("/hotel_info")
+    @RequestMapping("/hotel_info")//인덱스 top 10
     public String hotel_info(@RequestParam String h_name, Model model) throws Exception {
 
     	List<Ad_VO> hotel_info = ad_service.hotel_info(h_name);
@@ -153,5 +155,47 @@ public class Ad_Controller {
   
         return "WEB-INF/sp_hello/hotel_info.jsp";
     }
+    
+    @RequestMapping("/hotel_search")
+    public String h_main_sch(@ModelAttribute Ad_VO vo,
+                             @RequestParam("h_mainde") String country_eng,
+                             @RequestParam("h_maincity") String city_eng,
+                             @RequestParam("h_indateY") String h_indateY,
+                             @RequestParam("h_outdateY") String h_outdateY,
+                             @RequestParam("h_mainpeo") String h_roompeo,
+                             @RequestParam("night_time") String night_time,
+                             HttpServletResponse response,
+                             Model model) throws Exception {
+
+        // 각 매개변수에 대한 쿠키 설정
+        setCookie(response, "country_eng", country_eng);
+        setCookie(response, "city_eng", city_eng);
+        setCookie(response, "h_indateY", h_indateY);
+        setCookie(response, "h_outdateY", h_outdateY);
+        setCookie(response, "h_roompeo", h_roompeo);
+        setCookie(response, "night_time", night_time);
+
+        // vo 객체에 값 설정
+        vo.setCountry_eng(country_eng);
+        vo.setCity_eng(city_eng);
+        vo.setH_indateY(h_indateY);
+        vo.setH_outdateY(h_outdateY);
+        vo.setH_roompeo(h_roompeo);
+
+        // h_main_sch 로직은 그대로 유지
+        List<Ad_VO> hMainSchList = ad_service.h_main_sch(vo);
+
+        // 모델에 리스트를 추가
+        model.addAttribute("h_main_sch", hMainSchList);
+
+        return "WEB-INF/sp_hello/hotel_sc2.jsp";
+    }
+
+    // 쿠키를 설정하는 헬퍼 메서드
+    private void setCookie(HttpServletResponse response, String name, String value) {
+        Cookie cookie = new Cookie(name, value);
+        response.addCookie(cookie);
+    }
+
     
 }
